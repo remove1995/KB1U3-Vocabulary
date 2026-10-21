@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f276b1"><meta name="description" content="Explore Simon’s toy box. Discover seven toys, repeat the sequence and guess the sounds."><title>Simon’s Toy Box</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="game" aria-label="Simon’s Toy Box">
+<div id="scene"></div><section id="splash" aria-label="Simon’s Toy Box"><button id="play" class="pill splashPlay">Play <span aria-hidden="true">▶</span></button></section>
+<header id="bar"><button class="icon" id="home" aria-label="Home" title="Home"></button><div id="stageInfo"><span id="stageLabel"></span><span id="counter" aria-label="Progress"></span></div><div id="barActions"><div class="audioControl"><button class="icon" id="mute" aria-label="Mute sound" aria-pressed="false" aria-controls="voiceVolumePanel" title="Voice volume"></button><div id="voiceVolumePanel" class="volumePanel"><input id="voiceVolume" type="range" min="0" max="100" step="1" value="75" aria-label="Voice and toy sounds volume"><output id="voiceLevel">75%</output></div></div><div class="audioControl"><button class="icon" id="music" aria-label="Turn music off" aria-pressed="true" aria-controls="musicVolumePanel" title="Music volume"></button><div id="musicVolumePanel" class="volumePanel"><input id="musicVolume" type="range" min="0" max="100" step="1" value="3" aria-label="Music volume"><output id="musicLevel">3%</output></div></div><button id="replay" class="icon" aria-label="Retry" title="Retry"></button></div></header>
+<div id="bubble" class="bubble" role="status"></div>
+<button id="box" aria-label="Open the toy box"></button><div id="toys" role="group" aria-label="Toys"></div>
+<div id="sequenceNumbers" aria-hidden="true"></div>
+<button id="flashcard" class="flashcard" aria-label="Close flashcard" hidden><span class="deco s1" aria-hidden="true">★</span><div id="flashToy" class="atlas"></div><strong id="flashWord"></strong><span class="deco s2" aria-hidden="true">★</span></button>
+<div id="heldToy" class="atlas" hidden></div><div id="flyingToy" class="atlas" hidden></div><div id="sparkles" aria-hidden="true"></div>
+<div id="overlay" hidden><section id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"></section></div>
+<p class="sr" id="live" aria-live="polite"></p>
+</main><script src="game-data.js"></script><script src="recordings.js"></script><script src="audio.js"></script><script src="game.js"></script></body></html>
